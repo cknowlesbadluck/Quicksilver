@@ -8,11 +8,19 @@ Quicksilver Studio is the Forge surface of the Quicksilver intelligence platform
 
 | Stack | Status |
 |-------|--------|
-| Native iOS (Swift + SwiftUI / UIKit) | First-class |
-| Native Android (Kotlin + Jetpack Compose) | First-class |
-| React Native | First-class |
-| React (web) | First-class |
-| Progressive Web Apps (PWAs) | First-class |
+| Native iOS (Swift + SwiftUI / UIKit) | Scaffolded |
+| Native Android (Kotlin + Jetpack Compose) | Planned |
+| React Native | Planned |
+| React (web) | Planned |
+| Progressive Web Apps (PWAs) | Planned |
+
+## Current Status (this branch)
+
+- Domain models (`Project`, `StackID`, `EditorSession`)
+- `StackAdapter` protocol (the single extension point for new platforms)
+- Minimal SwiftUI shell (`ProjectNavigatorView`)
+- `NativeIOSAdapter` stub that respects SideStore export contract
+- SPM package layout ready for expansion
 
 ## Core Requirements (non-negotiable)
 
@@ -34,9 +42,13 @@ Use it as the system message for any agent or session that designs or implements
 - [SideStore Compatibility](Documentation/SIDESTORE.md)
 - [GitHub Workflow](Documentation/GITHUB.md)
 
-## Status
+## Next Implementation Priority
 
-Initial prompt and architecture committed. Implementation of the native iOS Studio shell and first stack adapters is next.
+1. Domain models + ProjectStore ✅ (started)
+2. GitEngine + credential flow
+3. iOS StackAdapter (templates + basic editor + SideStore export)
+4. Minimal SwiftUI shell (navigator + editor + preview placeholder) ✅ (started)
+5. React Native / PWA adapters
 
 ---
 
