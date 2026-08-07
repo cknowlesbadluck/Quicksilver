@@ -1,0 +1,38 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserdata
+*.xcworkspace/xcuserdata
+*.xcodeproj/xcuserdata
+*.xcodeproj/project.xcworkspace/xcuserdata
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# macOS
+.DS_Store
+
+# SideStore / signing artifacts
+*.ipa
+*.mobileprovision
+*.p12
+
+# Secrets
+.env
+*.pem
+
+# Node (for React / RN / PWA adapters)
+node_modules/
+dist/
+.next/
+
+# Android
+*.iml
+.gradle/
+local.properties
+
+# IDE
+.idea/
+.vscode/
+*.swp
