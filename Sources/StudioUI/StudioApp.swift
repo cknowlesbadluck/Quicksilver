@@ -54,6 +54,10 @@ struct ProjectNavigatorView: View {
     }
 }
 
-#Preview {
-    ProjectNavigatorView()
+// PreviewProvider instead of `#Preview`: the Previews macro plugin is not always available
+// to command-line `swift build`, and CI builds this package outside Xcode.
+struct ProjectNavigatorView_Previews: PreviewProvider {
+    static var previews: some View {
+        ProjectNavigatorView()
+    }
 }

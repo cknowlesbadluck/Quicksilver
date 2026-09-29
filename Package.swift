@@ -4,7 +4,9 @@ import PackageDescription
 let package = Package(
     name: "QuicksilverStudio",
     platforms: [
-        .iOS(.v17)
+        .iOS(.v17),
+        // Lets `swift build` / `swift test` run on macOS CI (SwiftUI APIs used need macOS 14).
+        .macOS(.v14)
     ],
     products: [
         .library(name: "StudioDomain", targets: ["StudioDomain"]),

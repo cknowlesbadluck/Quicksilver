@@ -7,7 +7,7 @@ public struct ProjectID: Hashable, Codable, Sendable {
     }
 }
 
-public struct Project: Identifiable, Codable, Sendable {
+public struct Project: Identifiable, Hashable, Codable, Sendable {
     public let id: ProjectID
     public var name: String
     public var stackID: StackID
